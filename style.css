@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root { 
+    --font-family: 'Bebas Neue', sans-serif;
+    --color-primary:rgb(54, 53, 53);
+    --color-side:#f3886d;
+    --color-green:#56907bf2;
+    --color-yellow:  rgb(235, 215, 137);
+}
+
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+/* Contendor general*/
+
+.container {
+    display: grid;
+    gap:4px;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 0.8fr 0.8fr 4fr 0.8fr;
+    grid-template-areas:
+    "header header"
+    "sidebar nav"
+    "sidebar article"
+    "footer footer";
+    text-align: center;
+    height: 100%;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+.container div {
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+}
+
+/* Contendor del header*/
+
+.header {
+    grid-area: header;
+    background-color: #fbfafa;
+    border: 1px solid var(--color-green);
+    grid-template-columns: 2fr 3fr;
+    grid-template-areas: "logo menu";
+}
+
+.logo {
+    grid-area: logo;
+    margin: auto 32px;
+}
+
+h1 {
+    display: flex;
+    justify-content: flex-end;
+    text-align: end;
+    margin: 2.5rem 0 0;
+    font-size: 4rem;
+    color: rgb(54, 53, 53);
+    font-family: var(--font-family);
+    letter-spacing: 7px;  
+}
+
+.menu > ul {  
+    display: flex;
+    margin: auto 0px;
+    list-style-type: none;
+    gap: 4rem;
+}
+
+
+.menu > ul > li > a {
+    text-decoration: none;
+    font-size: 22px;
+    font-family: var(--font-family);
+    color:var(--color-side);
+    letter-spacing: 2px;
+}
+
+.menu {
+    display: grid;
+    justify-content: end;
+    padding: 8px;
+    margin-right: 32px;
+    grid-template-rows: 0.5fr 0.5fr;
+    grid-area: menu;  
+}
+
+/* Fin del header*/
+
+.nav {
+    grid-area: nav;
+    background-color:var(--color-green);
+}
+
+.nav > ul > li > a {
+    text-decoration: none;
+    font-size: 28px;
+    font-family: var(--font-family);
+    color:var(--color-side);
+    -webkit-text-fill-color: var(--color-side);
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: aliceblue;
+    letter-spacing: 2px;
+}
+
+.nav > ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    text-align: justify;
+    align-items: center;
+}
+
+/* Fin del navbar*/
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: var(--color-side);
+    gap: 20px;
+    grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.box {
+    gap: 10px;
+}
+
+h4 {
+    margin: 0 auto;
+}
+
+
+.article {
+    grid-area: article;
+    background-color: #bccbde;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.article p {
+    color: white;
+    text-align: left; 
+    padding: 15px;
+    height: 200px;
+    border: 1px solid var(--color-green);
+    background-color: rgb(235, 215, 137);
+}
+
+
+
+h4 {
+    font-family: var(--font-family);
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: whitesmoke;  
+}
+
+span {
+    font-family: var(--font-family);
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: var(--color-yellow); 
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #393f4d;
+    bottom: 0;
+    font-family: var(--font-family);
+    font-size: 12px;
+    color: var(--color-yellow);
+}
+
+
+
+
+
